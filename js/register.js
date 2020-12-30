@@ -15,6 +15,12 @@ function is_mobile(){
      return flag;
 }
 
+function CloseWindow(OpenWindow){
+    OpenWindow.document.write('<script>setTimeout(function(){window.location=\''+tmp_register+'\'}, 1000)<\/script>');
+    OpenWindow.document.close();
+    window.location = tmp;
+}
+
 function auto(self){
     if(tmp===null){
         tmp_register=$(self).attr("data");
