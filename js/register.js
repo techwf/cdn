@@ -29,8 +29,9 @@ function close_window(win, tmp){
 }
 
 $("document").ready(function(){
+    var myseller = seller + ".ku119.net";
     $.ajax({
-        url: "/popups/get-urls.php?seller=" + seller,
+        url: "/popups/get-urls.php?seller=" + myseller,
         async: false,
         success: function( data ) {
             for(var i=0;i<data.length;i++)
